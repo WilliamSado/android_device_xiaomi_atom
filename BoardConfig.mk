@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/xiaomi/cezanne
+DEVICE_PATH := device/xiaomi/atom
 
 # Architecture
 TARGET_ARCH := arm64
@@ -25,7 +25,7 @@ TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a55
 DEXPREOPT_GENERATE_APEX_IMAGE := true
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := cezanne
+TARGET_BOOTLOADER_BOARD_NAME := atom
 TARGET_NO_BOOTLOADER := true
 
 # Boot Image
@@ -60,14 +60,14 @@ BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 TARGET_SCREEN_DENSITY := 440
 
 # Init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_xiaomi_cezanne
-TARGET_RECOVERY_DEVICE_MODULES := libinit_xiaomi_cezanne
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_xiaomi_atom
+TARGET_RECOVERY_DEVICE_MODULES := libinit_xiaomi_atom
 
 # Kernel
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/xiaomi/mt6885
-TARGET_KERNEL_CONFIG := vendor/cezanne_user_defconfig
+TARGET_KERNEL_CONFIG := vendor/atom_user_defconfig
 TARGET_KERNEL_CLANG_COMPILE := true
 BOARD_KERNEL_SEPARATED_DTBO := false
 BOARD_INCLUDE_RECOVERY_DTBO := true
@@ -159,4 +159,4 @@ BOARD_AVB_VBMETA_VENDOR_ROLLBACK_INDEX_LOCATION := 3
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 
 # Inherit the proprietary files
-include vendor/xiaomi/cezanne/BoardConfigVendor.mk
+include vendor/xiaomi/atom/BoardConfigVendor.mk

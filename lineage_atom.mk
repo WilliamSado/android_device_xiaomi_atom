@@ -12,10 +12,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Inherit from cezanne device
-$(call inherit-product, device/xiaomi/cezanne/device.mk)
+$(call inherit-product, device/xiaomi/atom/device.mk)
 
-PRODUCT_DEVICE := cezanne
-PRODUCT_NAME := lineage_cezanne
+PRODUCT_DEVICE := atom
+PRODUCT_NAME := lineage_atom
 PRODUCT_BRAND := Redmi
 PRODUCT_MODEL := M2006J10C
 PRODUCT_MANUFACTURER := Xiaomi
@@ -23,8 +23,3 @@ PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_CHARACTERISTICS := nosdcard
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
-
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="cezanne-user 11 RP1A.200720.011 V12.5.11.0.RJNCNXM release-keys"
-
-BUILD_FINGERPRINT := Redmi/cezanne/cezanne:11/RP1A.200720.011/V12.5.11.0.RJNCNXM:user/release-keys
